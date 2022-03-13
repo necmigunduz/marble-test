@@ -3,7 +3,6 @@ import { FetchOptions } from "../api/fetchData";
 
 export default function Input(props) {
   const [options, setOptions] = useState([]);
-  let [score, setScore] = useState(null);
 
   const getOptions = async (q_id) => {
     let os = await FetchOptions(q_id);
@@ -15,21 +14,13 @@ export default function Input(props) {
   }, [props.qId]);
 
   const handleValue = (e) => {
-    setScore(parseFloat(e.target.value));
+    let answers =   document.querySelectorAll(`input[name='${e.target.name}']`);
+    answers.forEach(answer => answer.disabled=true);
+    props.total();
   };
 
-  const response =
-    score === null ? (
-      <p>Please select one option!</p>
-    ) : score === 10 ? (
-      <p>Right answer!</p>
-    ) : (
-      <p>Wrong answer!</p>
-    );
-  console.log(response);
   return (
     <div>
-      {response}
       {options.map((option) => {
         return (
           <div key={option.id}>
