@@ -13,7 +13,7 @@ export default function Display() {
 
   useEffect(() => {
     getQuestions();
-  }, [questions]);
+  }, []);
   
   return (
     <div>

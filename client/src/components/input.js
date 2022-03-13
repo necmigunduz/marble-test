@@ -3,7 +3,7 @@ import { FetchOptions } from "../api/fetchData";
 
 export default function Input(props) {
   const [options, setOptions] = useState([]);
-  const [score, setScore] = useState(0);
+  let [score, setScore] = useState(null);
 
   const getOptions = async (q_id) => {
     let os = await FetchOptions(q_id);
@@ -13,15 +13,23 @@ export default function Input(props) {
   useEffect(() => {
     getOptions(props.qId);
   }, [props.qId]);
-  
-  let sum = 0;
-  const scoreHandler = async (e, id) => {
-    sum += parseInt(e.target.value)
-    setScore(sum)
+
+  const handleValue = (e) => {
+    setScore(parseFloat(e.target.value));
   };
 
+  const response =
+    score === null ? (
+      <p>Please select one option!</p>
+    ) : score === 10 ? (
+      <p>Right answer!</p>
+    ) : (
+      <p>Wrong answer!</p>
+    );
+  console.log(response);
   return (
     <div>
+      {response}
       {options.map((option) => {
         return (
           <div key={option.id}>
@@ -32,14 +40,13 @@ export default function Input(props) {
               name={option.question_id}
               id="track"
               value={option.o_point}
-              onChange={(e) => scoreHandler(e, option.question_id)}
+              onClick={handleValue}
             />
             <label htmlFor="track">{option.o_text}</label>
             <br />
           </div>
         );
       })}
-      <p>{score}</p>
     </div>
   );
 }
