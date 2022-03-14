@@ -18,6 +18,7 @@ This project is developed as a takehome project. It is a basic quiz application.
 - `git clone https://github.com/necmigunduz/marble-test`.
 
 ### Prepare server and client and run them:
+- Open a terminal  and follow the steps below;
 - `cd marble-test`,
 - `cd server`,
 - `bundle install`,
