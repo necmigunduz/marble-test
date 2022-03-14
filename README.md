@@ -18,7 +18,7 @@ This project is developed as a takehome project. It is a basic quiz application.
 - `git clone https://github.com/necmigunduz/marble-test`.
 
 ### Prepare server and client and run them:
-- `cd mb-test-app-latest`,
+- `cd marble-test`,
 - `cd server`,
 - `bundle install`,
 - `rails db:migrate`,
