@@ -26,7 +26,7 @@ Question.create([
 
 Option.create([
     { question_id: 1, option: "a", o_text: "Lagos", o_point: 0 },
-    { question_id: 1, option: "b", o_text: "Ajuba", o_point: 10 },
+    { question_id: 1, option: "b", o_text: "Abuja", o_point: 10 },
     { question_id: 1, option: "c", o_text: "Massala", o_point: 0 },
     { question_id: 1, option: "d", o_text: "Ankara", o_point: 0 },
 

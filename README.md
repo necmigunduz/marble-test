@@ -15,7 +15,7 @@ This project is developed as a takehome project. It is a basic quiz application.
 
 ## Getting Started
 ### Clone the repository and prepare client and server for operation:
-- `git clone git@github.com:necmigunduz/mb-test-app-latest.git`,
+- `git clone https://github.com/necmigunduz/marble-test`,
 - `cd mb-test-app-latest`,
 - `cd server`
 - `npm install`
