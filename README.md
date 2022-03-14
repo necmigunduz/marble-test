@@ -23,14 +23,15 @@ This project is developed as a takehome project. It is a basic quiz application.
 - `bundle install`,
 - `rails db:migrate`,
 - `rails db:seed`,
-- `rails s -p 4000`
-- `cd ..`,
+- `rails s -p 4000`,
+- Open another terminal,
+- `cd marble-test`,
 - `cd client`,
 - `npm install`,
 - `npm start`.
 
 ## Usage
-- A user, after following the steps above to prepare and run the application, can answer questions, and see his or her score. 
+- A user, after following the steps above to prepare and run the application, can answer questions, and see his or her score below the questions. 
 
 ## Author
 
