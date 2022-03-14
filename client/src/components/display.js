@@ -44,7 +44,7 @@ export default function Display() {
             {questions.map((question) => {
               return (
                 <li key={question.id} className="bg-light m-3 border">
-                  <p className="border bg-dark text-white card-title p-4">
+                  <p className="border bg-dark text-white card-title p-4 fs-5">
                     <span>{questions.indexOf(question) + 1}</span>-{" "}
                     {question.q_text}
                   </p>
@@ -53,7 +53,7 @@ export default function Display() {
               );
             })}
           </ul>
-          <button type="submit" className="btn btn-secondary w-100">
+          <button type="submit" className="btn btn-secondary w-100 m-auto p-2 fw-bold fs-5">
             Submit my answers
           </button>
         </form>
