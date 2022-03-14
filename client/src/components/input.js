@@ -20,20 +20,20 @@ export default function Input(props) {
   };
 
   return (
-    <div>
+    <div className="d-flex flex-column justify-content-start">
       {options.map((option) => {
         return (
-          <div key={option.id}>
+          <div key={option.id} className="table">
             <input
               type="radio"
               key={option.id}
-              className="action"
+              className="action card-text"
               name={option.question_id}
               id="track"
               value={option.o_point}
               onClick={handleValue}
             />
-            <label htmlFor="track">{option.o_text}</label>
+            <label htmlFor="track" className="p-3">{option.o_text}</label>
             <br />
           </div>
         );
